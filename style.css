@@ -5,6 +5,7 @@ body {
     color: azure;
     text-align: center;
     font-family: "Bricolage Grotesque", sans-serif;
+    text-decoration: none;
 }
 
 ul {
@@ -64,4 +65,27 @@ ul li a:hover {
 .instagram-embed-custom iframe {
   max-width: 100% !important;
   border-radius: 8px !important;
+}
+
+.icons a {
+  color: #ffff;
+}
+
+.collabs {
+  text-align: left; 
+  padding: 1% 5%;
+}
+
+/* CV button styling */
+.cv-btn {
+  background-color: rgb(79, 159, 159);   /* your base color */
+  color: #ffffff !important;
+  border-radius: 20px;
+  padding: 6px 16px;
+  transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+  background-color: rgb(96, 192, 192);   /* darker on hover */
+  color: #ffffff !important;
 }
