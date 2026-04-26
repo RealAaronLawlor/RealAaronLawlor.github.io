@@ -16,27 +16,33 @@
 
   <body>
 
-<nav class="navbar navbar-expand-sm navbar-dark justify-content-center" style="background-color: #191919;">
-            <div class="container-fluid">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="photography.html">Photography</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link cv-btn ms-2" href="https://rxresu.me/aaron.lawlor/marketing-intern-public" target="_blank">View CV</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #191919;">
+    <div class="container-fluid">
+        <!-- Invisible spacer to balance the CV button -->
+        <div style="width: 100px;"></div>
+        
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="photography.html">Photography</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link cv-btn" href="https://rxresu.me/aaron.lawlor/marketing-intern-public" target="_blank">View CV</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
     <main>
         <br>
@@ -47,6 +53,14 @@
         <a href="https://www.behance.net/aaronlawlor"> <i class="fa fa-behance-square" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/in/aaronlawlor/"> <i class="fa fa-linkedin-square" aria-hidden="true"></i></a></h1>
 </div>
-
+<div class="footer_block">
+        <p class="text-center" id="current_year"></p>
+        </div>
+        <script>
+                        const d = new Date();
+            let year = d.getFullYear();
+            let customString = "Aaron Lawlor Copyright © ";
+            document.getElementById("current_year").innerHTML = customString + year;
+        </script>
 </body>
 </html>
