@@ -1,3 +1,3 @@
 ## Hi there 👋
 
-## Click [here](https://realaaronlawlor.github.io) to view my WIP Portfolio Website I'm coding
+## Click [here](aaronlawlor.media) to view my WIP Portfolio Website I'm coding
