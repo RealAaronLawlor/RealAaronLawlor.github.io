@@ -8,30 +8,20 @@ body {
     text-decoration: none;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.custom-navbar {
   background-color: #191919;
 }
 
-ul li {
-  float: left;
+/* Default (desktop) */
+.nav-icon {
+  display: none;
 }
 
-ul li a {
-  display: block;
-  color: rgb(240, 255, 255);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.navbar-main {
+  align-items: center;
 }
 
-ul li a:hover {
-  color:rgb(79, 159, 159);
-}
-
+/* Keep your existing nav styling */
 .navbar-nav .nav-link {
   color: rgba(240, 255, 255, 0.505);
 }
@@ -42,6 +32,56 @@ ul li a:hover {
 
 .navbar-nav .nav-link:hover {
   color: #b6f2ff;
+}
+
+/* CV button (desktop) */
+.cv-btn {
+  background-color: rgb(79, 159, 159);
+  color: #ffffff !important;
+  border-radius: 20px;
+  padding: 6px 16px;
+  transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+  background-color: rgb(96, 192, 192);
+}
+
+/* 📱 MOBILE VIEW */
+@media (max-width: 575px) {
+
+  .custom-navbar .container-fluid {
+    justify-content: space-between;
+    padding: 8px 12px;
+  }
+
+  .navbar-main {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .nav-icon {
+    display: inline-block;
+    font-size: 1.3rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px;
+  }
+
+  /* Make CV icon a floating-style circle */
+  .cv-btn {
+    border-radius: 50%;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .portfolio-card {

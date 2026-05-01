@@ -10,35 +10,54 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2fffbf3130.js" crossorigin="anonymous"></script>
+
   </head>
 
   <body>
 
-<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #191919;">
+<nav class="navbar navbar-expand-sm navbar-dark custom-navbar">
     <div class="container-fluid">
-        <!-- Invisible spacer to balance the CV button -->
-        <div style="width: 100px;"></div>
-        
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="photography.html">Photography</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-        </ul>
 
-        <ul class="navbar-nav">
+        <!-- Main Nav -->
+         <ul class="navbar-nav navbar-main mx-auto">
             <li class="nav-item">
-                <a class="nav-link cv-btn" href="https://rxresu.me/aaron.lawlor/marketing-intern-public" target="_blank">View CV</a>
+                <a class="nav-link active" href="index.html">
+                    <i class="fa-solid fa-house nav-icon"></i>
+                    <span class="nav-text">Home</span>
+                </a>
             </li>
-        </ul>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="projects.html">
+                    <i class="fa-solid fa-folder-open nav-icon"></i>
+                    <span class="nav-text">Projects</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="photography.html">
+                    <i class="fa-solid fa-camera nav-icon"></i>
+                    <span class="nav-text">Photography</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="contact.html">
+                    <i class="fa-solid fa-envelope nav-icon"></i>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </li>
+            </ul>
+            <!-- CV Button -->
+            <ul class="navbar-nav cv-nav">
+                <li class="nav-item">
+                        <a class="nav-link cv-btn" href="https://rxresu.me/aaron.lawlor/marketing-intern-public" target="_blank">
+                            <i class="fa-solid fa-file-lines nav-icon"></i>
+                            <span class="nav-text">View CV</span>
+                        </a>
+                </li>
+         </ul>
     </div>
 </nav>
 
@@ -47,39 +66,11 @@
 <section class="container-fluid py-5 text-light">
   <div class="container">
     <h2 class="text-center mb-5">Behance Projects</h2>
-    <h4 class="text-center mb-5">Visit my profile <a href="https://www.behance.net/aaronlawlor" target="_blank" class="text-decoration-none">here</a></h4>
+    <h4 class="text-center mb-5">Visit my profile below</h4>
+    <h3><a href="https://www.behance.net/aaronlawlor" target="_blank" class="text-decoration-none" style="color: white;"><i class="fa-brands fa-behance"></i></a></h3>
+    <br>
     <div class="row g-4 justify-content-center">
 
-<div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-12">
-        <a href="https://www.behance.net/gallery/248584819/ABOUT-FACE-YOU-WARRIOR-(Official-Music-Video)" target="_blank" class="text-decoration-none">
-            <div class="card h-100 bg-secondary border-0 shadow-lg portfolio-card position-relative overflow-hidden">
-            <img src="https://i.ytimg.com/vi/0fFgs8GvNCQ/maxresdefault.jpg" class="card-img-top object-fit-cover" alt="Music video cover" style="height: 250px;"
-                 class="card-img-top object-fit-cover" 
-                 alt="Music video cover" 
-                 style="height: 300px; width: 100%; object-fit: cover;">
-            <div class="card-body d-flex flex-column p-4">
-              <h5 class="card-title mt-auto text-white mb-2">ABOUT FACE, YOU WARRIOR! (Official Music Video)</h5>
-              <p class="card-text small text-muted mb-0">2026</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      
-    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-12">
-        <a href="https://www.behance.net/gallery/248323701/Personal-Business-Card" target="_blank" class="text-decoration-none">
-            <div class="card h-100 bg-secondary border-0 shadow-lg portfolio-card position-relative overflow-hidden">
-            <img src="https://mir-cdn.behance.net/v1/rendition/project_modules/1400_webp/a58c32248323701.69ef41bcce25d.jpg" class="card-img-top object-fit-cover" alt="Personal Business Card" style="height: 250px;"
-                 class="card-img-top object-fit-cover" 
-                 alt="Personal Business Card" 
-                 style="height: 300px; width: 100%; object-fit: cover;">
-            <div class="card-body d-flex flex-column p-4">
-              <h5 class="card-title mt-auto text-white mb-2">Personal Business Card</h5>
-              <p class="card-text small text-muted mb-0">2026</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      
     <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-12">
         <a href="https://www.behance.net/gallery/247859923/Work-Placement-Portfolio-MSC" target="_blank" class="text-decoration-none">
             <div class="card h-100 bg-secondary border-0 shadow-lg portfolio-card position-relative overflow-hidden">
@@ -475,7 +466,6 @@
 <h3>Here's one of the models I created in Blender</h3><br>
 <iframe src="https://cloud.needle.tools/view/embed?file=Z1j9bw6ZMcFuE-17la2w-world" title="Fisherman | Hosted on Needle Cloud" style="width: 25%; height: 300px;" frameborder="0" allow="xr-spatial-tracking; accelerometer; gyroscope; display-capture; geolocation; camera; microphone" allowfullscreen></iframe>
 <br>
-    <h3><a href="https://cms.comp.dkit.ie/skuffle/">Visit the link for Fís here.</a></h3>
 <br>
 <h3>It's WIP</h3>
 <br><br>

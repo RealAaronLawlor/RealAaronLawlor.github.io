@@ -9,36 +9,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/2fffbf3130.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
 
-<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #191919;">
-    <div class="container-fluid">
-        <!-- Invisible spacer to balance the CV button -->
-        <div style="width: 100px;"></div>
-        
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="photography.html">Photography</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-        </ul>
 
-        <ul class="navbar-nav">
+<nav class="navbar navbar-expand-sm navbar-dark custom-navbar">
+    <div class="container-fluid">
+
+        <!-- Main Nav -->
+         <ul class="navbar-nav navbar-main mx-auto">
             <li class="nav-item">
-                <a class="nav-link cv-btn" href="https://rxresu.me/aaron.lawlor/marketing-intern-public" target="_blank">View CV</a>
+                <a class="nav-link active" href="index.html">
+                    <i class="fa-solid fa-house nav-icon"></i>
+                    <span class="nav-text">Home</span>
+                </a>
             </li>
-        </ul>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="projects.html">
+                    <i class="fa-solid fa-folder-open nav-icon"></i>
+                    <span class="nav-text">Projects</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="photography.html">
+                    <i class="fa-solid fa-camera nav-icon"></i>
+                    <span class="nav-text">Photography</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="contact.html">
+                    <i class="fa-solid fa-envelope nav-icon"></i>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </li>
+            </ul>
+            <!-- CV Button -->
+            <ul class="navbar-nav cv-nav">
+                <li class="nav-item">
+                        <a class="nav-link cv-btn" href="https://rxresu.me/aaron.lawlor/marketing-intern-public" target="_blank">
+                            <i class="fa-solid fa-file-lines nav-icon"></i>
+                            <span class="nav-text">View CV</span>
+                        </a>
+                </li>
+         </ul>
     </div>
 </nav>
 
