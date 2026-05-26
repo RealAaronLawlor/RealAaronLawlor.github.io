@@ -1,55 +1,516 @@
+* {
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
-    background-color: #212529;
+  background: radial-gradient(circle at top left, rgba(16, 242, 242, 0.25), transparent 35%), #212529;
     border: 0;
     margin: 0;
     color: azure;
     text-align: center;
     font-family: "Bricolage Grotesque", sans-serif;
     text-decoration: none;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-
+main {
+    flex: 1;
+}
+a {
+    text-decoration: none;
+}
+/* Navbar */
 .custom-navbar {
-  background-color: #191919;
+  background-color: rgba(25, 25, 25, 0.55);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
-/* Default (desktop) */
 .nav-icon {
   display: none;
 }
-
 .navbar-main {
   align-items: center;
 }
-
-/* Keep your existing nav styling */
 .navbar-nav .nav-link {
-  color: rgba(240, 255, 255, 0.505);
+  color: rgba(240, 255, 255, 0.65);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .navbar-nav .nav-link.active {
   color: #ffffff;
 }
-
 .navbar-nav .nav-link:hover {
   color: #b6f2ff;
+  transform: scale(1.05);
 }
-
-/* CV button (desktop) */
+/* CV button */
 .cv-btn {
   background-color: rgb(79, 159, 159);
   color: #ffffff !important;
-  border-radius: 20px;
+  border-radius: 999px;
   padding: 6px 16px;
   transition: all 0.3s ease;
 }
-
 .cv-btn:hover {
   background-color: rgb(96, 192, 192);
+  color: #ffffff !important;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+/* Homepage */
+.home-hero {
+  padding: 90px 20px 60px;
+  max-width: 1150px;
+}
+.home-hero h1 {
+  font-size: clamp(3.2rem, 8vw, 6.2rem);
+  line-height: 0.9;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+.home-hero h3 {
+  color: #ffffff;
+  font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+.home-hero .lead {
+  color: #b6f2ff;
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.home-hero p {
+  color: rgba(240, 255, 255, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.intro-image-card {
+  border-radius: 28px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+.intro-image-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.home-section {
+  max-width: 1100px;
+  padding: 55px 20px;
+}
+.experience-card {
+  text-align: left;
+  padding: 36px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.08); 
+}
+.experience-card h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+}
+.experience-card p {
+  color: rgba(240, 255, 255, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.collab-card p {
+  color: rgba(240, 255, 255, 0.78);
+  line-height: 1.7;
+  margin: 0;
+}
+/* Homepage responsive */
+@media (max-width: 991px) {
+  .home-hero {
+    padding: 65px 20px 40px;
+  }
+  .intro-image-card {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .experience-card {
+    text-align: center;
+  }
+}
+@media (max-width: 575px) {
+  .home-hero {
+    padding: 45px 16px 30px;
+  }
+  .home-section {
+    padding: 42px 16px;
+  }
+  .home-hero h1 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
+  .hero-buttons {
+    flex-direction: column;
+  }
+  .photo-button {
+    width: 100%;
+  }
+  .experience-card {
+    padding: 26px 20px;
+    border-radius: 20px;
+  }
+}
+/* Contact Page */
+.contact-page {
+  padding: 80px 20px;
+}
+.contact-hero {
+  max-width: 1100px;
+}
+.eyebrow {
+  color: #b6f2ff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.contact-copy {
+  text-align: left;
+}
+.contact-copy h1 {
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  line-height: 0.95;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.contact-copy .lead {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  color: #ffffff;
+  max-width: 620px;
+  margin-bottom: 18px;
+}
+.contact-copy p {
+  color: rgba(240, 255, 255, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 620px;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 34px 0 0;
+  flex-wrap: wrap;
+}
+.social-icons a {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 1.9rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.social-icons a:hover {
+  background-color: rgb(79, 159, 159);
+  color: #ffffff;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+.contact-image-card {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+.contact-image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
 }
 
-/* 📱 MOBILE VIEW */
-@media (max-width: 575px) {
+.portfolio-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.portfolio-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4) !important;
+}
+.portfolio-card img {
+  transition: all 0.4s ease;
+}
+.portfolio-card:hover img {
+  filter: brightness(0.9) saturate(1.1);
+}
+/* Instagram embed matches portfolio cards */
+.instagram-embed-custom {
+  font-size: 0.85em !important;  /* Smaller scale */
+}
+.instagram-embed-custom iframe {
+  max-width: 100% !important;
+  border-radius: 8px !important;
+}
 
+/* Photography Page */
+.photography-page {
+  padding: 80px 20px;
+}
+.photo-hero {
+  max-width: 1000px;
+  padding: 70px 20px 50px;
+}
+.photo-hero h1 {
+  font-size: clamp(2.7rem, 7vw, 5.6rem);
+  line-height: 0.95;
+  font-weight: 800;
+  max-width: 950px;
+  margin: 0 auto 26px;
+}
+.photo-intro {
+  color: rgba(240, 255, 255, 0.78);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.photo-hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}
+.photo-button {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(79, 159, 159);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+.photo-button:hover {
+  background-color: rgb(96, 192, 192);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.photo-button.secondary {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.photo-button.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.instagram-section,
+.collabs-section {
+  max-width: 1100px;
+  margin-top: 70px;
+}
+.section-heading {
+  margin-bottom: 28px;
+}
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.section-heading p {
+  color: rgba(240, 255, 255, 0.72);
+  font-size: 1.05rem;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.instagram-feed-card {
+  background-color: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.collab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.collab-card {
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 28px;
+  min-height: 100%;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+  transition: all 0.3s ease;
+}
+.collab-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(79, 159, 159, 0.22);
+  color: #b6f2ff;
+  font-size: 1.45rem;
+  margin-bottom: 22px;
+}
+.collab-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+.collab-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.collab-card li {
+  color: rgba(240, 255, 255, 0.78);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.collab-card li:last-child {
+  border-bottom: none;
+}
+.collab-card a {
+  color: #b6f2ff;
+  transition: color 0.3s ease;
+}
+.collab-card a:hover {
+  color: #ffffff;
+}
+/* Curator Feed */
+#curator-feed-default-feed-layout {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.crt-logo {
+  display: none !important;
+}
+/* Photography Responsive */
+@media (max-width: 991px) {
+  .photography-page {
+    padding: 60px 20px;
+  }
+  .photo-hero {
+    padding: 50px 10px 30px;
+  }
+  .collab-grid {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .collab-card {
+    text-align: center;
+  }
+  .collab-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 575px) {
+  .photography-page {
+    padding: 42px 16px;
+  }
+  .photo-hero {
+    padding: 35px 0 25px;
+  }
+  .photo-hero h1 {
+    font-size: clamp(2.4rem, 13vw, 4rem);
+  }
+  .photo-intro {
+    font-size: 1rem;
+  }
+  .photo-hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .photo-button {
+    width: 100%;
+  }
+  .instagram-section,
+  .collabs-section {
+    margin-top: 50px;
+  }
+  .instagram-feed-card {
+    padding: 14px;
+    border-radius: 18px;
+  }
+  .collab-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+}
+.spacer_box {
+    width: 100%;
+    height: 60px;
+}
+
+.footer_block {
+    background-color: rgba(25, 25, 25, 0.95);
+    padding: 18px 16px;
+    width: 100%;
+    color: white;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer_block p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+/* Tablet */
+
+@media (max-width: 991px) {
+  .contact-page {
+    padding: 60px 20px;
+  }
+
+  .contact-copy {
+    text-align: center;
+  }
+
+  .contact-copy p,
+  .contact-copy .lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .contact-image-card {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575px) {
   .custom-navbar .container-fluid {
     justify-content: space-between;
     padding: 8px 12px;
@@ -74,7 +535,6 @@ body {
     padding: 10px;
   }
 
-  /* Make CV icon a floating-style circle */
   .cv-btn {
     border-radius: 50%;
     padding: 10px 12px;
@@ -82,74 +542,28 @@ body {
     align-items: center;
     justify-content: center;
   }
-}
 
-.portfolio-card {
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.portfolio-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.4) !important;
-}
-.portfolio-card img {
-  transition: all 0.4s ease;
-}
-.portfolio-card:hover img {
-  filter: brightness(0.9) saturate(1.1);
-}
-/* Instagram embed matches portfolio cards */
-.instagram-embed-custom {
-  font-size: 0.85em !important;  /* Smaller scale */
-}
+  .contact-page {
+    padding: 48px 16px;
+  }
 
-.instagram-embed-custom iframe {
-  max-width: 100% !important;
-  border-radius: 8px !important;
-}
+  .contact-copy h1 {
+    margin-bottom: 18px;
+  }
 
-.icons a {
-  color: #ffff;
-}
+ .social-icons {
+    gap: 14px;
+    justify-content: center;
+    margin-top: 28px;
+  }
 
-.collabs {
-  text-align: left; 
-  padding: 1% 5%;
-}
+  .social-icons a {
+    width: 54px;
+    height: 54px;
+    font-size: 1.6rem;
+  }
 
-/* CV button styling */
-.cv-btn {
-  background-color: rgb(79, 159, 159);   /* your base color */
-  color: #ffffff !important;
-  border-radius: 20px;
-  padding: 6px 16px;
-  transition: all 0.3s ease;
-}
-
-.cv-btn:hover {
-  background-color: rgb(96, 192, 192);   /* darker on hover */
-  color: #ffffff !important;
-}
-
-#curator-feed-default-feed-layout {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.crt-logo {
-  display: none !important;
-}
-
-.spacer_box {
-    width: 100%;
-    height: 60px;
-}
-
-.footer_block {
-    background-color: #191919;
-    padding: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    color: white;
+  .contact-image-card {
+    border-radius: 22px;
+  }
 }

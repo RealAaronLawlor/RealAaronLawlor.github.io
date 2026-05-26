@@ -60,53 +60,84 @@
     </div>
 </nav>
 
-    <main>
-        <br>
-        <h1>I'm a photographer</h1>
-        <br>
-        <h3>I've been shooting for a number of years now</h3>
-        <br>
-        <h3>I began self-taught, and have been formally trained through my BA (Hons) in Creative Media</h3>
-        <br>  
-        <h3>I mainly post my work to <a href="https://www.instagram.com/aaron.loller/">Instagram</a></h3>
-        <br>
+    <main class="photography-page">
+        <section class="photography-hero container">
+            <p class="eyebrow">Photography</p>
+            <h1>I capture moments with energy, atmosphere, and story.</h1>
+            <p class="photo-intro">
+                I'm a self-taught photographer who has continued developing my skills through my BA (Hons) in Creative Media. My work focuses on live performance, creative projects, events, and promotional content for artists, businesses, and organisations.
+            </p>
+            <div class="photo-hero-buttons">
+                <a href="https://www.instagram.com/aaron.loller/" target="_blank" class="photo-button">
+                    View my Instagram
+                </a>
+                <a href="#collaborations" class="photo-button secondary">
+                    See collaborations
+                </a>
+            </div>
+            </section>
 
-        
+            <section class="instagram-section container">
+                <div class="section-heading">
+                    <h2>Recent Work</h2>
+                    <p>A selection of my photography shared through Instagram.</p>
+                </div>
+                <div class="instagram-feed-card">
+                    <div id="curator-feed-default-feed-layout"></div>
+                </div>
+            </section>
 
-        <!-- Place <div> tag where you want the feed to appear -->
-<div id="curator-feed-default-feed-layout"></div>
+            <section class="collabs-section container" id="collaborations">
+                <div class="section-heading">
+                    <h2>Notable Collaborations</h2>
+                    <p>A selection of artists, businesses, and creatives I've had the pleasure of working with.</p>
+                </div>
+                <div class="collabs-grid">
+                    <div class="collab-card">
+                        <div class="collab-icon">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                        <h3>Artists</h3>
+                        <ul>
+                            <li>Amplifi</li>
+                            <li>Thanks Mom</li>
+                            <li>Radar, the band</li>
+                            <li>Y2Kinova</li>
+                        </ul>
+                    </div>
+<div class="spacer_box"></div>
+                    <div class="collab-card">
+                        <div class="collab-icon">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3>Businesses/Organisations</h3>
+                        <ul>
+                            <li>Centre Stage Vocal Academy</li>
+                            <li>Garageland</li>
+                            <li>Dundalk Institute of Technology (DkIT)</li>
+                            <li>TUS Athlone</li>
+                            <li>Medical Supply Company LTD</li>
+                            <li>Breakthrough Sound</li>
+                        </ul>
+                        </div>
+                        <div class="spacer_box"></div>
+                    <div class="collab-card">
+                        <div class="collab-icon">
+                            <i class="fa-solid fa-camera-retro"></i>
+                        </div>
+                        <h3>Creatives</h3>
+                        <ul>
+                            <li><a href="https://www.instagram.com/tokyoisonline/">@tokyoisonline</a></li>
+                            <li><a href="https://www.instagram.com/amplifi.music/">@amplifi.music</a></li>
+                            <li><a href="https://www.instagram.com/framedbyfionn/">@framedbyfionn</a></li>
+                            <li><a href="https://www.instagram.com/tom.mxmahon/">@tom.mxmahon</a></li>
+                        </ul>
+                    </div>
 
+                </div>
+            </section>
+            </main>
 
-<br>
-<div class="collabs">
-<h4 style="text-decoration: underline;">Notable Collaborations</h4>
-<br>
-<h5 style="text-decoration: underline;">Artists:</h5>
-<dl>
-    <li>Amplifi</li>
-    <li>Thanks Mom</li>
-    <li>Radar, the band</li>
-    <li>Y2Kinova</li>
-</dl>
-<br>
-<h5 style="text-decoration: underline;">Businesses/Organisations</h5>
-<dl>
-    <li>Centre Stage Vocal Academy</li>
-    <li>Garageland</li>
-    <li>Dundalk Institute of Technology (DkIT)</li>
-    <li>TUS Athlone</li>
-    <li>Medical Supply Company LTD</li>
-    <li>Breakthrough Sound</li>
-</dl>
-<br>
-<h5 style="text-decoration: underline;">Creatives:</h5>
-<dl>
-    <li><a href="https://www.instagram.com/tokyoisonline/">@tokyoisonline</a></li>
-    <li><a href="https://www.instagram.com/amplifi.music/">@amplifi.music</a></li>
-    <li><a href="https://www.instagram.com/framedbyfionn/">@framedbyfionn</a></li>
-    <li><a href="https://www.instagram.com/tom.mxmahon/">@tom.mxmahon</a></li>
-</dl>
-</div>
 <div class="footer_block">
         <p class="text-center" id="current_year"></p>
         </div>
@@ -117,10 +148,9 @@ var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="U
 i.src="https://cdn.curator.io/published/0206a665-bf0d-48a1-9466-4d2bdb071161.js";
 e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
 })();
-                        const d = new Date();
-            let year = d.getFullYear();
-            let customString = "Aaron Lawlor Copyright © ";
-            document.getElementById("current_year").innerHTML = customString + year;
-</script>
+            const currentDate = new Date();
+            const year = currentDate.getFullYear();
+            document.getElementById("current_year").innerHTML = "Aaron Lawlor Copyright © " + year;
+        </script>
 </body>
 </html>

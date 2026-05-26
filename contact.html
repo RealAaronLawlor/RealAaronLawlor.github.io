@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2fffbf3130.js" crossorigin="anonymous"></script>
 </head>
-  </head>
 
   <body>
 
@@ -61,23 +60,45 @@
     </div>
 </nav>
 
-    <main>
-        <br>
-        <h1>Contact me!</h1>
-        <br>
-        <p>If you want to get in contact with me, feel free to use any of my platforms below.<br>I am open to collaborating on projects, get in touch and we can sort something out!</p>
-        <div class="icons"><h1><a href="https://www.instagram.com/aaron.loller/"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="https://www.behance.net/aaronlawlor"> <i class="fa fa-behance-square" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/aaronlawlor/"> <i class="fa fa-linkedin-square" aria-hidden="true"></i></a></h1>
-</div>
+    <main class="contact-page">
+        <section class="contact-hero container">
+            <div class="row align-items-center g5">
+                <div class="col-lg-6 contact-copy">
+                    <p class="eyebrow">Let's work together</p>
+
+                    <h1>Contact me!</h1>
+                    <p class="lead">I’m always open to collaborating on creative projects, photography work, digital design, and new media ideas.</p>
+                    <p>Whether you’re looking for photography, design support, creative content, or just want to chat about a project, feel free to reach out through any of my platforms below.</p>
+                
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/aaron.loller/" target="_blank" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.behance.net/aaronlawlor" target="_blank" aria-label="Behance">
+                            <i class="fa-brands fa-square-behance"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/aaronlawlor/" target="_blank" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-image-card">
+                        <img src="images/glitchmaxing.jpg" alt="Aaron Lawlor contact image">
+                    </div>
+                    </div>
+            </div>
+        </section>
+        </main>
 <div class="footer_block">
         <p class="text-center" id="current_year"></p>
         </div>
         <script>
-                        const d = new Date();
-            let year = d.getFullYear();
-            let customString = "Aaron Lawlor Copyright © ";
-            document.getElementById("current_year").innerHTML = customString + year;
+            const currentDate = new Date();
+            const year = currentDate.getFullYear();
+            document.getElementById("current_year").innerHTML = "Aaron Lawlor Copyright © " + year;
         </script>
 </body>
 </html>

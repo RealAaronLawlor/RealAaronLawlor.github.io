@@ -62,32 +62,69 @@
 </nav>
 
 
-    <main>
-        <br>
-        <h1>Hi, I'm Aaron!</h1>
-        <br>
-        <h3>Scroll down to see more about me</h3>
-        <br>
-        <h3>Navigate the headers to see my work</h3>
-        <br>  
-
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="image"><img src="images/Portrait.JPG" class="rounded float-middle" alt="Portrait of Aaron Lawlor" width="300" height="300"></div>
-      <hr class="d-sm-none">
+<main>  
+<section class="container home-hero">
+    <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+            <div class="portfolio-card intro-image-card">
+                <img src="images/Portrait.JPG" alt="Portrait of me, Aaron Lawlor">
+            </div>
+        </div>
+        <div class="col-lg-7 text-lg-start text-center">
+            <p class="eyebrow">Creative Media Student</p>
+            <h1>Hi, I'm Aaron!</h1>
+            <h3>Photographer, Digital Designer & Creative Media Student</h3>
+            <p class="lead">I create visual, digital, and interactive work across photography, web design, video, branding, marketing, and creative media.</p>
+            <p>I’m a 3rd year Creative Media student at DkIT with an interest in visual storytelling,
+        digital design, photography, video editing, and interactive media. I enjoy creating work
+        that feels clean, engaging, and purposeful, whether that’s through a website, a poster,
+        a photo series, or a video project.</p>
+        <div class="hero-buttons">
+            <a href="projects.html" class="photo-button">View Projects</a>
+            <a href="photography.html" class="photo-button secondary">View Photography</a>
+        </div>
+        </div>
     </div>
-    <div class="col-sm-8">
-      <h4>My name is Aaron, and I'm a 3rd Year Creative Media Student in DkIT.</h4>
+    </section>
+
+    <section class="container home-section">
+        <div class="section-heading">
+            <h2>What I Do</h2>
+            <p>My work combines creative design, practical digital skills, and a strong interest in storytelling.</p>
+        </div>
+        <div class="collab-grid">
+            <div class="collab-card">
+                <div class="collab-icon">
+                    <i class="fa-solid fa-camera-retro"></i>
+                </div>
+                <h3>Photography</h3>
+                <p>I work as a freelance photographer, capturing live performances, creative projects, events, and promotional content for artists, businesses, and organisations.</p>
+            </div>
+            <div class="collab-card">
+                <div class="collab-icon">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+                <h3>Design & Media</h3>
+                <p>I have experience with DaVinci Resolve, Adobe Creative Cloud, Affinity, Figma, Ableton Live, and Reaper across design, editing, prototyping, and audio work.</p>
+            </div>
+            <div class="collab-card">
+                <div class="collab-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Web & Interactive</h3>
+                <p>I use HTML, CSS, JavaScript, and creative coding skills to build websites and interactive media projects that feel polished and purposeful.</p>
+            </div>
+
+        </div>
+    </section>
     </main>
 <div class="footer_block">
         <p class="text-center" id="current_year"></p>
         </div>
         <script>
-                        const d = new Date();
-            let year = d.getFullYear();
-            let customString = "Aaron Lawlor Copyright © ";
-            document.getElementById("current_year").innerHTML = customString + year;
+            const currentDate = new Date();
+            const year = currentDate.getFullYear();
+            document.getElementById("current_year").innerHTML = "Aaron Lawlor Copyright © " + year;
         </script>
 </body>
 </html>

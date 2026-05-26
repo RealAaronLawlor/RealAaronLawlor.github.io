@@ -61,12 +61,11 @@
     </div>
 </nav>
 
-    <main>
 
-<section class="container-fluid py-5 text-light">
-  <div class="container">
-    <h2 class="text-center mb-5">Behance Projects</h2>
-    <h4 class="text-center mb-5">Visit my profile below</h4>
+    <main class="photography-page">
+        <section class="photography-hero container">
+            <p class="eyebrow">Behance Projects</p>
+            <h1>Feel free to check out my projects below!</h1>
     <h3><a href="https://www.behance.net/aaronlawlor" target="_blank" class="text-decoration-none" style="color: white;"><i class="fa-brands fa-behance"></i></a></h3>
     <br>
     <div class="row g-4 justify-content-center">
@@ -488,25 +487,22 @@
   </div>
 </section>
 <script async src="//www.instagram.com/embed.js"></script>
-    </main>
   
 <h1>I'm currently working on a group project called 'Skuffle' for my 3rd Year Final Project</h1>
 <h2>Check it out <a href = "https://www.skufflegame.github.io" target="_blank">here</a></h2>
 <h3>I created the site, aswell as the character models and the backend stuff for the realtime health tracker</h3>
 <h3>Here's one of the models I created in Blender</h3><br>
 <iframe src="https://cloud.needle.tools/view/embed?file=Z1j9bw6ZMcFuE-17la2w-world" title="Fisherman | Hosted on Needle Cloud" style="width: 25%; height: 300px;" frameborder="0" allow="xr-spatial-tracking; accelerometer; gyroscope; display-capture; geolocation; camera; microphone" allowfullscreen></iframe>
-<br>
-<br>
-<h3>It's WIP</h3>
 <br><br>
+</section>
+</main>
 <div class="footer_block">
         <p class="text-center" id="current_year"></p>
         </div>
         <script>
-                        const d = new Date();
-            let year = d.getFullYear();
-            let customString = "Aaron Lawlor Copyright © ";
-            document.getElementById("current_year").innerHTML = customString + year;
+            const currentDate = new Date();
+            const year = currentDate.getFullYear();
+            document.getElementById("current_year").innerHTML = "Aaron Lawlor Copyright © " + year;
         </script>
 </body>
 </html>
