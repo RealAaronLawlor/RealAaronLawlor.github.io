@@ -143,6 +143,10 @@ a {
     max-width: 420px;
     margin: 0 auto;
   }
+  .net-art-image-card {
+    max-width: 800px;
+    margin: 0 auto;
+  }
   .hero-buttons {
     justify-content: center;
   }
@@ -565,5 +569,79 @@ a {
 
   .contact-image-card {
     border-radius: 22px;
+  }
+}
+
+/* Net Art Page */
+.net-art-hero {
+  max-width: 1200px;
+  padding: 80px 20px 70px;
+}
+
+.net-art-image-card {
+  margin: 0;
+  max-width: 560px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.net-art-image-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.net-art-license {
+  max-width: 560px;
+  margin: 18px 0 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(240, 255, 255, 0.6);
+}
+
+.net-art-license a {
+  color: #b6f2ff;
+  transition: color 0.3s ease;
+}
+
+.net-art-license a:hover {
+  color: #ffffff;
+}
+
+.net-art-license .cc-icon {
+  max-width: 1em;
+  max-height: 1em;
+  margin-left: 0.2em;
+  vertical-align: text-bottom;
+}
+
+.net-art-copy h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.95;
+  margin-bottom: 26px;
+  text-wrap: balance;
+}
+
+.net-art-about {
+  max-width: 560px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(240, 255, 255, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 991px) {
+  .net-art-hero {
+    padding: 55px 20px 40px;
+  }
+  .net-art-image-card,
+  .net-art-license,
+  .net-art-about {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
